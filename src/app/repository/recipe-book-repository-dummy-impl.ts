@@ -21,7 +21,7 @@ export class RecipeBookRepositoryDummyImpl {
   
   public recettes: Recette[] = 
   [
-    {name : "Simple Cake", preTime : 10, cookTime : 30, serving : 12, ingredients : this.ingredients, image : "./image"},
+    {name : "Simple Cake", preTime : 10, cookTime : 30, serving : 12, ingredients : this.ingredients, image : "./data/simple-white-cake.png"},
     {name : "Chocolate Cake", preTime : 15, cookTime : 25, serving : 6, ingredients : this.ingredients, image : "./image"},
     {name : "Clafoutis", preTime : 15, cookTime : 35, serving : 6, ingredients : this.ingredients, image : "./image"}
   ]

@@ -11,10 +11,14 @@
   <ion-col size="auto">
     <ion-label>{{recette.serving}}</ion-label>
   </ion-col>
+    <app-ingredient *ngFor="let item of recette.ingredients"
+      [ingredient]=item>
+    </app-ingredient>
   <ion-col size="auto">
-    <ion-label>{{recette.ingredients}}</ion-label>
-  </ion-col>
-  <ion-col size="auto">
-    <ion-label>{{recette.image}}</ion-label>
+    <ion-img
+      src={{recette.image}}
+      alt="The Wisconsin State Capitol building in Madison, WI at night"
+    ></ion-img>
+    <ion-label></ion-label>
   </ion-col>
 </ion-row>
