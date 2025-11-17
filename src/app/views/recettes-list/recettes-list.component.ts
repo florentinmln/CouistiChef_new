@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { IonRow, IonCol, IonLabel } from '@ionic/angular';
+import { Component, Input} from '@angular/core';
+import { IonRow, IonCol, IonLabel } from '@ionic/angular/standalone';
 import { Recette } from 'src/app/data/recette';
 
 @Component({
