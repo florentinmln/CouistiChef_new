@@ -5,6 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonGrid, IonButton, IonBut
 import { Recette } from 'src/app/data/recette';
 import { ActivatedRoute } from '@angular/router';
 import { RecipeBookRepository } from 'src/app/repository/recipe-book-repository';
+import { RecipeDetailsComponent } from '../recipe-details/recipe-details.component';
 
 @Component({
   selector: 'app-recipe',
@@ -12,7 +13,7 @@ import { RecipeBookRepository } from 'src/app/repository/recipe-book-repository'
   styleUrls: ['./recipe.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonGrid, IonButton,
-    IonButtons, IonBackButton, IonRow
+    IonButtons, IonBackButton, IonRow, RecipeDetailsComponent
   ]
 })
 export class RecipePage implements OnInit {

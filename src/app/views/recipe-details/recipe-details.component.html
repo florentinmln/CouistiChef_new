@@ -1,0 +1,23 @@
+<ion-row class="board">
+   <ion-col>
+    <ion-img class="image_recipe"
+      src={{recette.image}}
+      alt="The Wisconsin State Capitol building in Madison, WI at night"
+    ></ion-img>
+  </ion-col>
+  <ion-col class="description">
+    <ion-row style="align-items: left;"><ion-label><h1>{{recette.name}}</h1></ion-label></ion-row>
+    <ion-row style="align-items: left;"><ion-label>prep {{recette.preTime}} mins</ion-label></ion-row>
+    <ion-row style="align-items: left;"><ion-label>cook {{recette.cookTime}} mins</ion-label></ion-row>
+    <ion-row style="align-items: left;"><ion-label>{{recette.serving}}</ion-label></ion-row>
+    <ion-row style="align-items: left;">
+      <ion-label>
+        <app-ingredient *ngFor="let item of recette.ingredients"
+          [ingredient]=item>
+        </app-ingredient>
+      </ion-label>
+    </ion-row>
+  </ion-col>
+    
+ 
+</ion-row>
