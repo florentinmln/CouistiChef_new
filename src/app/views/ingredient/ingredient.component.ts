@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IonRow, IonCol, IonLabel } from '@ionic/angular/standalone';
+import { IonRow, IonCol, IonLabel, IonButton } from '@ionic/angular/standalone';
 import { Ingredient } from 'src/app/data/ingredient';
 
 @Component({
@@ -7,8 +7,19 @@ import { Ingredient } from 'src/app/data/ingredient';
   templateUrl: './ingredient.component.html',
   styleUrls: ['./ingredient.component.scss'],
   standalone: true,
-  imports: [IonRow, IonCol, IonLabel]
+  imports: [IonRow, IonCol, IonLabel, IonButton]
 })
 export class IngredientComponent{
   @Input() ingredient!: Ingredient;
+
+  canNotBeDecreassed(){
+    return this.ingredient.quantity <=0;
+  }
+  onSub(){
+    this.ingredient.quantity--;
+  }
+
+  onAdd(){
+    this.ingredient.quantity++;
+  }
 }
