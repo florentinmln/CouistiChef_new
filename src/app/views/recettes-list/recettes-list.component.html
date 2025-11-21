@@ -10,11 +10,16 @@
     <ion-row style="align-items: left;"><ion-label>prep {{recette.preTime}} mins</ion-label></ion-row>
     <ion-row style="align-items: left;"><ion-label>cook {{recette.cookTime}} mins</ion-label></ion-row>
     <ion-row style="align-items: left;"><ion-label>{{recette.serving}}</ion-label></ion-row>
-    <ion-row style="align-items: left;"><ion-label>
-      <app-ingredient *ngFor="let item of recette.ingredients"
-        [ingredient]=item>
-      </app-ingredient>
-    </ion-label></ion-row>
+    <!-- <ion-row style="align-items: left;">
+      <ion-label>
+        <app-ingredient *ngFor="let item of recette.ingredients"
+          [ingredient]=item>
+        </app-ingredient>
+      </ion-label>
+    </ion-row> -->
+  </ion-col>
+  <ion-col>
+    <ion-button [routerLink]="['../recipe', recette.name]">Recipe</ion-button>
   </ion-col>
     
  

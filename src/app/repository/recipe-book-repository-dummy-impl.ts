@@ -7,7 +7,7 @@ import { Ingredient } from '../data/ingredient';
 @Injectable({
   providedIn: 'root',
 })
-export class RecipeBookRepositoryDummyImpl {
+export class RecipeBookRepositoryDummyImpl extends RecipeBookRepository {
 
   private ingredients: Ingredient[] =
   [
@@ -25,4 +25,8 @@ export class RecipeBookRepositoryDummyImpl {
     {name : "Chocolate Cake", preTime : 15, cookTime : 25, serving : 6, ingredients : this.ingredients, image : "assets/chocolate-cake.jpg"},
     {name : "Clafoutis", preTime : 15, cookTime : 35, serving : 6, ingredients : this.ingredients, image : "assets/clafoutis.jpg"}
   ]
+
+  public override getRecette(name: string): Recette|undefined{
+    return this.recettes.find(recette => recette.name === name) as Recette;
+  }
 }
