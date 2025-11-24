@@ -20,18 +20,11 @@ export class IngredientModificationComponent  implements OnInit {
   @Input() ingredient!: Ingredient; 
   @Input() recette!: Recette;
 
-
-  onSub(){
-    this.recette.serving--;
-    for (let i = 0; i < this.recette.ingredients.length; ++i) {
-      this.recette.ingredients[i].quantity = (this.recette.ingredients[i].quantity * this.recette.serving)/(this.recette.serving + 1)
-    }
-  }
-
-  onAdd(){
-    this.recette.serving++;
-    for (let i = 0; i < this.recette.ingredients.length; ++i) {
-      this.recette.ingredients[i].quantity = (this.recette.ingredients[i].quantity * this.recette.serving)/(this.recette.serving - 1)
+  onDel(){
+    for (let i = 0; i < this.recette.ingredients.length; ++i){
+      if (this.recette.ingredients[i].name == this.ingredient.name){
+        this.recette.ingredients.splice(i, 1);
+      }
     }
   }
 

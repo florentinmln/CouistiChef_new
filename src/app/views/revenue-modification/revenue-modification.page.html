@@ -13,13 +13,16 @@
   <ion-grid *ngIf="recette">
     <h1>CCtoi</h1>
     <ion-row>
-      <ion-input type="number" label="Prep Time (mins)" labelPlacement="stacked" value="{{recette.preTime}}"/>
+      <ion-input type="number" label="Prep Time (mins)" labelPlacement="stacked" inputmode="decimal" 
+    value="{{recette.preTime}}" [(ngModel)]="recette.preTime" ngDefaultControl/>
     </ion-row>
     <ion-row>
-      <ion-input type="number" label="Cook Time (mins)" labelPlacement="stacked" value="{{recette.cookTime}}"/>
+      <ion-input type="number" label="Cook Time (mins)" labelPlacement="stacked" inputmode="decimal" 
+    value="{{recette.cookTime}}" [(ngModel)]="recette.cookTime" ngDefaultControl/>
     </ion-row>
     <ion-row>
-      <ion-input type="number" label="Serving" labelPlacement="stacked" value="{{recette.serving}}"/>
+      <ion-input type="number" label="Serving" labelPlacement="stacked" inputmode="decimal" 
+    value="{{recette.serving}}" [(ngModel)]="recette.serving" ngDefaultControl/>
     </ion-row>
     <app-ingredient-modification *ngFor="let item of recette.ingredients"
       [ingredient]=item>

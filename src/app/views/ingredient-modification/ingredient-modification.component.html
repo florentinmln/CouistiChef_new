@@ -4,6 +4,6 @@
     value="{{ingredient.quantity}}" [(ngModel)]="ingredient.quantity" ngDefaultControl/>
   </ion-col>
   <ion-col>
-    <ion-button>bin</ion-button>
+    <ion-button (click)="onDel()">bin</ion-button>
   </ion-col>
 </ion-row>
