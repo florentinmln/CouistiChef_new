@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="recette">
+      {{recette.name}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid *ngIf="recette">
+    <h1>CCtoi</h1>
+    <ion-row>
+      <input type="text" id="name" name="name" placeholder="Prep Time(mins)"/>
+    </ion-row>
+    <ion-row>
+      <input type="text" id="name" name="name" placeholder="Cook Time(mins)"/>
+    </ion-row>
+    <ion-row>
+      <input type="text" id="name" name="name" placeholder="Serving"/>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <input type="text" id="name" name="name" placeholder="Serving"/>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

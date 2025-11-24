@@ -1,4 +1,5 @@
 <ion-row class="board">
+  <ion-button [routerLink]="['../recipe', recette.name]">
    <ion-col>
     <ion-img class="image_recipe"
       src={{recette.image}}
@@ -7,20 +8,9 @@
   </ion-col>
   <ion-col class="description">
     <ion-row style="align-items: left;"><ion-label><h1>{{recette.name}}</h1></ion-label></ion-row>
-    <ion-row style="align-items: left;"><ion-label>prep {{recette.preTime}} mins</ion-label></ion-row>
-    <ion-row style="align-items: left;"><ion-label>cook {{recette.cookTime}} mins</ion-label></ion-row>
-    <ion-row style="align-items: left;"><ion-label>{{recette.serving}}</ion-label></ion-row>
-    <!-- <ion-row style="align-items: left;">
-      <ion-label>
-        <app-ingredient *ngFor="let item of recette.ingredients"
-          [ingredient]=item>
-        </app-ingredient>
-      </ion-label>
-    </ion-row> -->
+    <ion-row style="align-items: left;"><ion-label>prep : {{recette.preTime}} mins</ion-label></ion-row>
+    <ion-row style="align-items: left;"><ion-label>cook : {{recette.cookTime}} mins</ion-label></ion-row>
+    <ion-row style="align-items: left;"><ion-label>Serving : {{recette.serving}}</ion-label></ion-row>
   </ion-col>
-  <ion-col>
-    <ion-button [routerLink]="['../recipe', recette.name]">Recipe</ion-button>
-  </ion-col>
-    
- 
+  </ion-button>
 </ion-row>
