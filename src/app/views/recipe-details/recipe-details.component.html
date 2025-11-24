@@ -1,7 +1,13 @@
 <ion-row class="board">
    <ion-col>
-    <ion-row style="align-items: left;"><ion-label>prep {{recette.preTime}} mins</ion-label></ion-row>
-    <ion-row style="align-items: left;"><ion-label>cook {{recette.cookTime}} mins</ion-label></ion-row>
+    <ion-row>
+      <ion-col><ion-label>prep {{recette.preTime}} mins<br>
+        cook {{recette.cookTime}} mins</ion-label>
+      </ion-col>
+      <ion-col style="align-items: right;">
+        <ion-button (click)="" [disabled]="">Edit recipe</ion-button>
+      </ion-col>
+    </ion-row>
     <ion-row style="align-items: left;"><ion-label>{{recette.serving}}</ion-label>
       <ion-col size="auto">
         <ion-button (click)="onSub()" [disabled]="canNotBeDecreassed()">-</ion-button>
@@ -22,6 +28,10 @@
         </app-ingredient>
       </ion-label>
     </ion-row>
+  <ion-row>
+    <h1>Directions</h1>
+  </ion-row>
+  <ion-row> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, omnis quia quisquam expedita voluptatem odit suscipit laboriosam sequi corrupti, molestias esse? Consequatur molestiae ut dolor nobis in voluptatibus officia inventore.</ion-row>
   </ion-col>
     
  
