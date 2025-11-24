@@ -1,5 +1,7 @@
 {
   "name": "CouistiChef",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular-standalone"
 }
