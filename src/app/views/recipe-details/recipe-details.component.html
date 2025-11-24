@@ -1,13 +1,20 @@
 <ion-row class="board">
    <ion-col>
+    <ion-row style="align-items: left;"><ion-label>prep {{recette.preTime}} mins</ion-label></ion-row>
+    <ion-row style="align-items: left;"><ion-label>cook {{recette.cookTime}} mins</ion-label></ion-row>
+    <ion-row style="align-items: left;"><ion-label>{{recette.serving}}</ion-label>
+      <ion-col size="auto">
+        <ion-button (click)="onSub()" [disabled]="canNotBeDecreassed()">-</ion-button>
+      </ion-col>
+      <ion-col size="auto">
+        <ion-button (click)="onAdd()" [disabled]="canNotBeDecreassed()">+</ion-button>
+      </ion-col>
+    </ion-row>
     <ion-img class="image_recipe"
       src={{recette.image}}
       alt="The Wisconsin State Capitol building in Madison, WI at night"
     ></ion-img>
-    <ion-row style="align-items: left;"><ion-label><h1>{{recette.name}}</h1></ion-label></ion-row>
-    <ion-row style="align-items: left;"><ion-label>prep {{recette.preTime}} mins</ion-label></ion-row>
-    <ion-row style="align-items: left;"><ion-label>cook {{recette.cookTime}} mins</ion-label></ion-row>
-    <ion-row style="align-items: left;"><ion-label>{{recette.serving}}</ion-label></ion-row>
+    <h2>Ingredients</h2>
     <ion-row style="align-items: left;">
       <ion-label>
         <app-ingredient *ngFor="let item of recette.ingredients"

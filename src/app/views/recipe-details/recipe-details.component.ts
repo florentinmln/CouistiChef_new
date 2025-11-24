@@ -18,6 +18,19 @@ export class RecipeDetailsComponent  implements OnInit {
   @Input() recette!: Recette;
 
 
+  canNotBeDecreassed(){
+    return this.recette.serving <=0;
+  }
+
+  onSub(){
+    this.recette.serving--;
+  }
+
+  onAdd(){
+    this.recette.serving++;
+  }
+
+
   constructor() { }
 
   ngOnInit() {}

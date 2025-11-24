@@ -12,14 +12,4 @@ import { Ingredient } from 'src/app/data/ingredient';
 export class IngredientComponent{
   @Input() ingredient!: Ingredient;
 
-  canNotBeDecreassed(){
-    return this.ingredient.quantity <=0;
-  }
-  onSub(){
-    this.ingredient.quantity--;
-  }
-
-  onAdd(){
-    this.ingredient.quantity++;
-  }
 }
