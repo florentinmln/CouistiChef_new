@@ -1,6 +1,7 @@
 <ion-row>
   <ion-col>
-    <ion-input type="number" label="{{ingredient.name}}" labelPlacement="stacked" value="{{ingredient.quantity}}"/>
+    <ion-input type="number" label="{{ingredient.name}}" labelPlacement="stacked" inputmode="decimal" 
+    value="{{ingredient.quantity}}" [(ngModel)]="ingredient.quantity" ngDefaultControl/>
   </ion-col>
   <ion-col>
     <ion-button>bin</ion-button>
