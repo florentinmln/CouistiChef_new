@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IonGrid, IonRow, IonCol, IonLabel, IonImg, IonButton,} from '@ionic/angular/standalone';
+import { IonGrid, IonRow, IonCol, IonLabel, IonImg, IonButton, IonInput} from '@ionic/angular/standalone';
 import { Recette } from 'src/app/data/recette';
 import { IngredientComponent } from '../ingredient/ingredient.component';
 import { RouterLink } from '@angular/router';
@@ -13,7 +13,8 @@ import { Ingredient } from 'src/app/data/ingredient';
   styleUrls: ['./ingredient-modification.component.scss'],
   standalone: true,
   imports: [IonRow, IonCol, IonLabel, IonGrid, IngredientComponent, FormsModule, CommonModule, IonImg,
-    IonButton, RouterLink ]
+    IonButton, RouterLink, IonInput
+  ]
 })
 export class IngredientModificationComponent  implements OnInit {
   @Input() ingredient!: Ingredient; 

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonGrid, IonButton, IonButtons, IonBackButton, IonRow, IonCol } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonGrid, IonButton, IonButtons, IonBackButton, IonRow, IonCol, IonInput } from '@ionic/angular/standalone';
 import { Recette } from 'src/app/data/recette';
 import { RecipeBookRepository } from 'src/app/repository/recipe-book-repository';
 import { ActivatedRoute } from '@angular/router';
@@ -13,7 +13,7 @@ import { IngredientModificationComponent } from '../ingredient-modification/ingr
   styleUrls: ['./revenue-modification.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton,
-    IonGrid, IonButtons, IonBackButton, IonRow, IonCol, IngredientModificationComponent
+    IonGrid, IonButtons, IonBackButton, IonRow, IonCol, IngredientModificationComponent, IonInput
   ]
 })
 export class RevenueModificationPage implements OnInit {
