@@ -5,6 +5,7 @@ import { IngredientComponent } from '../ingredient/ingredient.component';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Ingredient } from 'src/app/data/ingredient';
 
 @Component({
   selector: 'app-recipe-details',
@@ -24,10 +25,16 @@ export class RecipeDetailsComponent  implements OnInit {
 
   onSub(){
     this.recette.serving--;
+    for (let i = 0; i < this.recette.ingredients.length; ++i) {
+      this.recette.ingredients[i].quantity = (this.recette.ingredients[i].quantity * this.recette.serving)/(this.recette.serving + 1)
+    }
   }
 
   onAdd(){
     this.recette.serving++;
+    for (let i = 0; i < this.recette.ingredients.length; ++i) {
+      this.recette.ingredients[i].quantity = (this.recette.ingredients[i].quantity * this.recette.serving)/(this.recette.serving - 1)
+    }
   }
 
 
