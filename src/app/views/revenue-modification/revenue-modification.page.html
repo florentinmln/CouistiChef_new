@@ -22,12 +22,12 @@
       <input type="text" id="name" name="name" placeholder="Serving"/>
     </ion-row>
     <ion-row>
-      <ion-col>
-        <input type="text" id="name" name="name" placeholder="Serving"/>
-      </ion-col>
-      <ion-col>
-      </ion-col>
+      <input type="text" id="name" name="name" placeholder="Serving"/>
     </ion-row>
-
+    <ion-row style="align-items: left;">
+      <app-ingredient-modification *ngFor="let item of recette.ingredients"
+        [ingredient]=item>
+      </app-ingredient-modification>
+    </ion-row>
   </ion-grid>
 </ion-content>

@@ -5,6 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonGrid, IonButton, IonBut
 import { Recette } from 'src/app/data/recette';
 import { RecipeBookRepository } from 'src/app/repository/recipe-book-repository';
 import { ActivatedRoute } from '@angular/router';
+import { IngredientModificationComponent } from '../ingredient-modification/ingredient-modification.component';
 
 @Component({
   selector: 'app-revenue-modification',
@@ -12,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./revenue-modification.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton,
-    IonGrid, IonButtons, IonBackButton, IonRow, IonCol
+    IonGrid, IonButtons, IonBackButton, IonRow, IonCol, IngredientModificationComponent
   ]
 })
 export class RevenueModificationPage implements OnInit {

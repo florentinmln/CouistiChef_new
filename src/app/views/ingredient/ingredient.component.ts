@@ -10,6 +10,6 @@ import { Ingredient } from 'src/app/data/ingredient';
   imports: [IonRow, IonCol, IonLabel, IonButton]
 })
 export class IngredientComponent{
-  @Input() ingredient!: Ingredient;
+  @Input() ingredient!: Ingredient; 
 
 }
